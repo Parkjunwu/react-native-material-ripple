@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import {
   View,
@@ -26,23 +25,6 @@ export default class Ripple extends PureComponent {
     disabled: false,
 
     onRippleAnimation: (animation, callback) => animation.start(callback),
-  };
-
-  static propTypes = {
-    ...Animated.View.propTypes,
-    ...TouchableWithoutFeedback.propTypes,
-
-    rippleColor: PropTypes.string,
-    rippleOpacity: PropTypes.number,
-    rippleDuration: PropTypes.number,
-    rippleSize: PropTypes.number,
-    rippleContainerBorderRadius: PropTypes.number,
-    rippleCentered: PropTypes.bool,
-    rippleSequential: PropTypes.bool,
-    rippleFades: PropTypes.bool,
-    disabled: PropTypes.bool,
-
-    onRippleAnimation: PropTypes.func,
   };
 
   constructor(props) {
